@@ -1,0 +1,22 @@
+version: 2
+
+models:
+  - name: stg_user_activity_summary
+    columns:
+      - name: id_player
+        tests: [not_null]
+      - name: country
+        tests: []          # на стейджинге можно оставить без not_null
+      - name: sum_deposits
+        tests: []
+
+  - name: fct_users_by_country
+    columns:
+      - name: country
+        tests: [not_null, unique]
+      - name: users
+        tests: [not_null]
+      - name: total_deposits
+        tests: [not_null]
+      - name: avg_deposit
+        tests: [not_null]

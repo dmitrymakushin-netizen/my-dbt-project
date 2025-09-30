@@ -1,0 +1,15 @@
+# dbt build artifacts
+target/
+dbt_packages/
+logs/
+
+# OS/IDE
+.DS_Store
+.vscode/
+
+# Python
+__pycache__/
+*.pyc
+
+# env files
+.env
